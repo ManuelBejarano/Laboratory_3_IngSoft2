@@ -2,6 +2,7 @@ package patterns.factory.pizza
 
 import patterns.factory.pizza.NY.NYPizzaStore
 import patterns.factory.pizza.chicago.ChicagoPizzaStore
+import pizza.Medellin.MedellinPizzaStore
 
 object PizzaTestDrive {
 
@@ -10,6 +11,7 @@ object PizzaTestDrive {
 
         val nyStore: PizzaStore = NYPizzaStore()
         val chicagoStore: PizzaStore = ChicagoPizzaStore()
+        val medellinStore : PizzaStore = MedellinPizzaStore()
 
         var pizza = nyStore.orderPizza("cheese")
         println("Ethan ordered a " + pizza.name + "\n")
@@ -34,5 +36,17 @@ object PizzaTestDrive {
 
         pizza = chicagoStore.orderPizza("veggie")
         println("Joel ordered a " + pizza.name + "\n")
+
+        pizza = medellinStore.orderPizza("calentao")
+        println("Manuel ordenó una " + pizza.name + "\n")
+
+        pizza = medellinStore.orderPizza("sudao")
+        println("Daniel ordenó una " + pizza.name + "\n")
+
+        pizza = medellinStore.orderPizza("hogao")
+        println("Santiago ordenó una " + pizza.name + "\n")
+
+        pizza = medellinStore.orderPizza("morcilla")
+        println("Felipe ordenó una " + pizza.name + "\n")
     }
 }
